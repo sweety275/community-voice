@@ -1,0 +1,81 @@
+import mongoose from "mongoose";
+
+const concernSchema = new mongoose.Schema(
+  {
+    reporter: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      default: null,
+    },
+    trackingCodeHash: {
+      type: String,
+      select: false,
+      unique: true,
+      sparse: true,
+    },
+    title: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    category: {
+      type: String,
+      required: true,
+    },
+    campus: {
+      type: String,
+      required: true,
+    },
+    house: {
+      type: String,
+      default: "",
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    priority: {
+      type: String,
+      enum: ["Low", "Medium", "High"],
+      default: "Medium",
+    },
+    reportingMode: {
+      type: String,
+      enum: ["Named", "Confidential", "Anonymous"],
+      default: "Named",
+    },
+    assignedTo: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      default: null,
+    },
+    assignedBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      default: null,
+    },
+    status: {
+      type: String,
+      default: "Submitted",
+    },
+    statusHistory: [
+      {
+        status: {
+          type: String,
+          required: true,
+        },
+        note: {
+          type: String,
+          default: "",
+        },
+        updatedAt: {
+          type: Date,
+          default: Date.now,
+        },
+      },
+    ],
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model("Concern", concernSchema);

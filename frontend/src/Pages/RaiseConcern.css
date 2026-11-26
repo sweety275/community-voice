@@ -1,0 +1,179 @@
+.concern-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+  background: #f4f6fb;
+  font-family: Arial, sans-serif;
+}
+
+.concern-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 35px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.concern-card h2 {
+  text-align: center;
+  color: #5141a5;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.concern-card p {
+  text-align: center;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.concern-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.concern-card label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #25213b;
+}
+
+.concern-card input,
+.concern-card select,
+.concern-card textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px;
+  border: 1px solid #d8d5e8;
+  border-radius: 7px;
+  margin-bottom: 12px;
+  outline: none;
+  font-size: 14px;
+  background: white;
+}
+
+.concern-card textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.concern-card input:focus,
+.concern-card select:focus,
+.concern-card textarea:focus {
+  border-color: #5141a5;
+  box-shadow: 0 0 0 2px rgba(81, 65, 165, 0.1);
+}
+
+.concern-card button {
+  padding: 14px;
+  background: #5141a5;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.concern-card button:hover {
+  background: #3e3185;
+}
+
+@media (max-width: 600px) {
+  .concern-card {
+    padding: 22px;
+  }
+}
+
+.reporting-info {
+  background: #f4f1ff;
+  border-left: 4px solid #5141a5;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin: 0 0 12px;
+}
+
+.reporting-info p {
+  color: #5141a5;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: left;
+  margin: 0;
+}
+
+.concern-card .back-dashboard-btn {
+  background: #e9e5f8;
+  color: #5141a5;
+  border: 1px solid #d5cdef;
+  margin-top: 5px;
+}
+
+.concern-card .back-dashboard-btn:hover {
+  background: #dcd5f3;
+}
+
+/* Anonymous tracking code popup */
+.tracking-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.tracking-popup-content {
+  background: #fff;
+  width: 100%;
+  max-width: 420px;
+  padding: 28px 24px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tracking-popup-content h3 {
+  color: #5141a5;
+  margin-bottom: 14px;
+}
+
+.tracking-popup-content strong {
+  display: block;
+  background: #f4f1ff;
+  color: #5141a5;
+  padding: 14px;
+  border-radius: 8px;
+  margin: 14px 0;
+  overflow-wrap: anywhere;
+  font-size: 16px;
+}
+
+.tracking-popup-content p {
+  color: #555;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.tracking-popup-content button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 11px;
+  border: none;
+  border-radius: 7px;
+  background: #5141a5;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.tracking-popup-content button:hover {
+  background: #3e3185;
+}
